@@ -1,16 +1,16 @@
-import axios from 'axios';
+import axios from "axios";
 
 // API 서버에서 게시물 목록 조회
-async function getList(){
-  const res = await axios.get('https://11.fesp.shop/posts', {
-    params: { type: 'test', page: 2, limit: 5 }
+async function getList() {
+  const res = await axios.get("https://11.fesp.shop/posts", {
+    params: { type: "test", page: 2, limit: 5 },
   });
   console.log(res);
   return res.data;
 }
 
 // 조회한 게시물 목록으로 화면에 출력
-async function renderList(){
+async function renderList() {
   const list = await getList();
   const liList = list.item.map((post) => {
     return `
@@ -21,7 +21,7 @@ async function renderList(){
       </li>
       <hr/>`;
   });
-  document.querySelector('#postList').innerHTML = liList.join('');
+  document.querySelector("#postList").innerHTML = liList.join("");
 }
 
 renderList();
