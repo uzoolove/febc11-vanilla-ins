@@ -15,3 +15,4 @@
 11. [Git 브랜치 전략](./docs/11.branch.md)
 12. [PR 실습](./docs/12.practice.md)
 13. [디자인 작업시 주의사항](./docs/13.design.md)
+14. [자주 묻는 질문](./docs/14.qna.md)
