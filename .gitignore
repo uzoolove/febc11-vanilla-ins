@@ -3,6 +3,7 @@
 
 
 ins
+*.bak
 
 ### Node ###
 # Logs
