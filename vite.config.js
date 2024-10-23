@@ -1,5 +1,4 @@
 import { defineConfig } from 'vite';
-import fs from 'node:fs';
 
 export default defineConfig({
   build: {
@@ -19,5 +18,5 @@ export default defineConfig({
       },
     },
   },
-  appType: 'mpa', // fallback url 사용안함
+  appType: 'mpa', // fallback 사용안함
 });
