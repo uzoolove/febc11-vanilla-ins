@@ -19,4 +19,7 @@ export default defineConfig({
     },
   },
   appType: 'mpa', // fallback 사용안함
+  server: {
+    // open: 'src/pages/main/index.html', // 서버 시작 시 '/main.html' 자동으로 열기
+  },
 });
