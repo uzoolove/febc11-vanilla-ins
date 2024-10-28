@@ -76,7 +76,7 @@ class NavBar extends HTMLElement {
 .logo {
 	width:78.48px;
 	height:78.47px;
-	background-image:url(../../assets/logo.svg);
+	background-image:url(/assets/logo.svg);
 }
 .menu-list {
 	display:flex;
@@ -255,7 +255,7 @@ class NavBar extends HTMLElement {
 		display:none;
 	}
 	.logo {
-		background-image:url(../../assets/logoMini.svg);
+		background-image:url(/assets/logoMini.svg);
 		width:76px;
 		height: 60px;
 	}
@@ -283,24 +283,24 @@ class NavBar extends HTMLElement {
                         <div class="right-section">
                             <div class="search-box">
                                 <span class="search-icon">
-                                    <img src="../../assets/search.svg"/>
+                                    <img src="/assets/search.svg"/>
                                 </span>
                                 <input type="text" placeholder="검색">
                             </div>
-                            <a class="extra-icon"><img src="../../assets/search.svg"/></a>
-                            <a class="extra-icon"><img src="../../assets/user.svg"/></a>
-                              <a class="extra-icon"><img src="../../assets/shop.svg"/></a>
-                            <a href="../wishList/index.html" class="extra-icon"><img src="../../assets/heart.svg"/></a>
-                              <a href="../myCart/index.html" class="extra-icon"><img src="../../assets/shop.svg"/></a>                            
+                            <a class="extra-icon"><img src="/assets/search.svg"/></a>
+                            <a class="extra-icon"><img src="/assets/user.svg"/></a>
+                              <a class="extra-icon"><img src="/assets/shop.svg"/></a>
+                            <a href="../wishList/index.html" class="extra-icon"><img src="/assets/heart.svg"/></a>
+                              <a href="../myCart/index.html" class="extra-icon"><img src="/assets/shop.svg"/></a>                            
                             <span class="hamburger" id="hamburger">
-                                <img src="../../assets/hambuger.svg"/>
+                                <img src="/assets/hambuger.svg"/>
                             </span>
                         </div>
                     </nav>
                    <div>
                    <div class="side-menu" id="sideMenu">
                         <button class="close-btn" id="closeBtn">
-                            <img src="../../assets/closeButton.svg"/>
+                            <img src="/assets/closeButton.svg"/>
                         </button>
                         <div class="auth-buttons">
                             <a href="#" class="auth-button signup">가입하기</a>
@@ -308,33 +308,33 @@ class NavBar extends HTMLElement {
                         </div>
                         <ul class="side-menu-list">
                             ${menuItems
-                              .map(
-                                item => `
+        .map(
+          item => `
                                 <li class="side-menu-item">
                                     <a href="../itemList/index.html">${item}</a>
                                     <span class="arrow">
-                                    <img src ="../../assets/rightButton.svg"/>
+                                    <img src ="/assets/rightButton.svg"/>
                                     </span>
                                 </li>
                             `,
-                              )
-                              .join('')}
+        )
+        .join('')}
                         </ul>
                         <div class="additional-links">
                             <a href="../customerService/index.html" class="additional-link">
-                                <img src="../../assets/help.svg" alt="고객센터">
+                                <img src="/assets/help.svg" alt="고객센터">
                                 고객센터
                             </a>
                             <a href="../myCart/index.html" class="additional-link">
-                                <img src="../../assets/shop.svg" alt="장바구니">
+                                <img src="/assets/shop.svg" alt="장바구니">
                                 장바구니
                             </a>
                             <a href="#" class="additional-link">
-                                <img src="../../assets/order.svg" alt="주문">
+                                <img src="/assets/order.svg" alt="주문">
                                 주문
                             </a>
                             <a href="../findStore/index.html" class="additional-link">
-                                <img src="../../assets/store.svg" alt="매장 찾기">
+                                <img src="/assets/store.svg" alt="매장 찾기">
                                 매장 찾기
                             </a>
                         </div>

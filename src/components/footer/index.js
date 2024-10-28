@@ -1,16 +1,16 @@
 class NikeFooter extends HTMLElement {
-    constructor() {
-        super();
-        this.attachShadow({ mode: 'open' });
-    }
+  constructor() {
+    super();
+    this.attachShadow({ mode: 'open' });
+  }
 
-    connectedCallback() {
-        this.render();
-        this.setupEventListeners();
-    }
+  connectedCallback() {
+    this.render();
+    this.setupEventListeners();
+  }
 
-    render() {
-        this.shadowRoot.innerHTML = `
+  render() {
+    this.shadowRoot.innerHTML = `
             <style>
                 :host {
                     font-family: 'Helvetica', Arial, sans-serif;
@@ -82,7 +82,7 @@ class NikeFooter extends HTMLElement {
                     line-height: 24.5px; 
                 }
                 .toggle-icon::after {
-                    background: url(../../assets/arrowBottom.svg) no-repeat 0px 0px;      
+                    background: url(/assets/arrowBottom.svg) no-repeat 0px 0px;      
                     content: "";    
                     display: inline-block;
                     float: right;
@@ -175,19 +175,19 @@ class NikeFooter extends HTMLElement {
                 </div>
             </footer>
         `;
-    }
+  }
 
-    setupEventListeners() {
-        const sections = this.shadowRoot.querySelectorAll('.footer-section');
-        sections.forEach(section => {
-            const title = section.querySelector('h3');
-            title.addEventListener('click', () => {
-                if (window.innerWidth < 768) {
-                    section.classList.toggle('active');
-                }
-            });
-        });
-    }
+  setupEventListeners() {
+    const sections = this.shadowRoot.querySelectorAll('.footer-section');
+    sections.forEach(section => {
+      const title = section.querySelector('h3');
+      title.addEventListener('click', () => {
+        if (window.innerWidth < 768) {
+          section.classList.toggle('active');
+        }
+      });
+    });
+  }
 }
 
 customElements.define('nike-footer', NikeFooter);
