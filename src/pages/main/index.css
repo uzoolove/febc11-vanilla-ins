@@ -226,11 +226,11 @@ section h1 {
 }
 
 .left {
-  background-image: url(/assets/left.svg);
+  background-image: url(../../assets/left.svg);
 }
 
 .right {
-  background-image: url(/assets/right.svg);
+  background-image: url(../../assets/right.svg);
 }
 
 .card-container {
