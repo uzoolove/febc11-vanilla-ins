@@ -161,7 +161,7 @@ h1 {
     padding-right: 20px;
   }
   .faq-item h3::after {
-    background: url(/assets/arrowBottom.svg) no-repeat 0px 0px;
+    background: url(/icons/arrowBottom.svg) no-repeat 0px 0px;
     content: '';
     display: inline-block;
     height: 24px;

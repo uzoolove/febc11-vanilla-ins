@@ -12,8 +12,8 @@
 </head>
 
 <body>
-  <!-- 네비게이션바 -->
-  <nav-bar menu-items='["New & Featured", "Men", "Women", "Kids", "Sale"]'></nav-bar>
+  <!-- 네비게이션 바 -->
+  <nav-bar></nav-bar>
 
   <!-- 컨텐츠 시작 -->
   <div class="container">
@@ -23,12 +23,12 @@
       <div class="product-controls">
         <button id="hideFilters" class="control-button">
           <p>필터 숨기기</p>
-          <img src="../../assets/filter.svg" />
+          <img src="/icons/filter.svg" />
         </button>
         <div class="sort-dropdown">
           <button id="sortButton" class="control-button">
             <p>정렬 기준</p>
-            <img src="../../assets/arrowBottom.svg" />
+            <img src="/icons/arrowBottom.svg" />
           </button>
           <ul id="sortOptions" class="sort-options">
             <li>추천순</li>
@@ -92,7 +92,7 @@
         <p>741개의 결과</p>
         <div class="filter">
           <span>필터</span>
-          <img src="../../assets/filter.svg" />
+          <img src="/icons/filter.svg" />
         </div>
       </div>
 
@@ -218,41 +218,6 @@
   <!-- 푸터 -->
   <nike-footer></nike-footer>
 
-  <script>
-    const hideFiltersButton = document.getElementById('hideFilters');
-    const sidebar = document.querySelector('.sidebar');
-    const sortButton = document.getElementById('sortButton');
-    const sortOptions = document.getElementById('sortOptions');
-
-    const stickyElement = document.getElementById('listFilter');
-    const stickyOffset = stickyElement.offsetTop;
-
-    window.addEventListener('scroll', () => {
-      if (window.pageYOffset > stickyOffset) {
-        stickyElement.querySelector('h2').classList.add('fixed');
-      } else {
-        stickyElement.querySelector('h2').classList.remove('fixed');
-      }
-    });
-
-    hideFiltersButton.addEventListener('click', () => {
-      sidebar.style.display =
-        sidebar.style.display === 'none' ? 'block' : 'none';
-      hideFiltersButton.querySelector('p').textContent =
-        sidebar.style.display === 'none' ? '필터 보이기' : '필터 숨기기';
-    });
-
-    sortButton.addEventListener('click', () => {
-      sortOptions.classList.toggle('show');
-    });
-
-    sortOptions.addEventListener('click', event => {
-      if (event.target.tagName === 'LI') {
-        sortButton.querySelector('p').textContent = event.target.textContent;
-        sortOptions.classList.remove('show');
-      }
-    });
-  </script>
 </body>
 
 </html>

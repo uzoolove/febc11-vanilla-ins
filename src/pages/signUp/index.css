@@ -7,7 +7,7 @@ input[type='date']::-webkit-inner-spin-button {
 input[type='date'] {
   position: relative;
   width: 100%;
-  background: url('/assets/calendar.svg') no-repeat right 10px center;
+  background: url('/icons/calendar.svg') no-repeat right 10px center;
   height: auto;
   background-color: #fff;
 }

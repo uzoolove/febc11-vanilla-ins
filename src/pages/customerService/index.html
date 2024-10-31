@@ -12,8 +12,8 @@
 </head>
 
 <body>
-  <!-- 네비게이션바 -->
-  <nav-bar menu-items='["New & Featured", "Men", "Women", "Kids", "Sale"]'></nav-bar>
+  <!-- 네비게이션 바 -->
+  <nav-bar></nav-bar>
 
   <!-- 컨텐츠 컨테이너 -->
   <div class="container">
@@ -23,7 +23,7 @@
     <div class="search-container">
       <input type="text" class="search-input" placeholder="무엇을 도와드릴까요?">
       <div class="search-icon">
-        <img src="../../assets/search_gray.svg" alt="검색" />
+        <img src="/icons/search_gray.svg" alt="검색" />
       </div>
     </div>
 
@@ -97,7 +97,7 @@
       <div class="contact-grid">
         <div class="contact-item">
           <div>
-            <img src="../../assets/chat.svg" />
+            <img src="/icons/chat.svg" />
           </div>
           <div class="contact-text">
             <h3>채팅 문의</h3>
@@ -107,7 +107,7 @@
         </div>
         <div class="contact-item">
           <div>
-            <img src="../../assets/device.svg" alt="전화 문의" />
+            <img src="/icons/device.svg" alt="전화 문의" />
           </div>
           <div class="contact-text">
             <h3>전화 문의</h3>
@@ -117,7 +117,7 @@
         </div>
         <div class="contact-item">
           <div>
-            <img src="../../assets/device.svg" alt="AS 문의" />
+            <img src="/icons/device.svg" alt="AS 문의" />
           </div>
           <div class="contact-text">
             <h3>AS 문의</h3>
@@ -127,7 +127,7 @@
         </div>
         <div class="contact-item">
           <div>
-            <img src="../../assets/pin.svg" alt="매장 찾기" />
+            <img src="/icons/pin.svg" alt="매장 찾기" />
           </div>
           <div class="contact-text">
             <h3>매장 찾기</h3>
@@ -139,32 +139,7 @@
 
   <!-- 푸터 -->
   <nike-footer></nike-footer>
-  <script>
-    // 토글 기능 스크립트
-    function toggleFAQ(event) {
-      if (window.innerWidth <= 768) {
-        const faqItem = event.target.closest('.faq-item');
-        faqItem.classList.toggle('active');
-      }
-    }
 
-    document.querySelectorAll('.faq-item h3').forEach(item => {
-      item.addEventListener('click', toggleFAQ);
-    });
-
-    window.addEventListener('resize', () => {
-      if (window.innerWidth > 768) {
-        document.querySelectorAll('.faq-item').forEach(item => {
-          item.classList.remove('active');
-          item.querySelector('ul').style.display = 'block';
-        });
-      } else {
-        document.querySelectorAll('.faq-item').forEach(item => {
-          item.querySelector('ul').style.display = 'none';
-        });
-      }
-    });
-  </script>
 </body>
 
 </html>

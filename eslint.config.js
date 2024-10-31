@@ -18,4 +18,10 @@ export default [
   {
     ignores: ['.history', 'dist'],
   },
+  {
+    env: {
+      browser: true,
+      node: true,
+    }
+  }
 ];

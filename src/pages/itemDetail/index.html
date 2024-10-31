@@ -12,8 +12,9 @@
 </head>
 
 <body>
-  <!-- 네비게이션바 -->
-  <nav-bar menu-items='["New & Featured", "Men", "Women", "Kids", "Sale"]'></nav-bar>
+  <!-- 네비게이션 바 -->
+  <nav-bar></nav-bar>
+
   <!-- 장바구니 버튼(모바일 버전에서만 나타납니다) -->
   <button class="shopping-cart-button">장바구니</button>
 
@@ -84,7 +85,7 @@
 
       <!-- 위시리스트 버튼 -->
       <button class="wishlist">
-        위시리스트 <img src="../../assets/heart.svg" />
+        위시리스트 <img src="/icons/heart.svg" />
       </button>
 
       <!-- 상품설명 캡션 -->
@@ -118,7 +119,7 @@
         <!-- 무료 배송 및 반품 -->
         <div class="toggle-title">
           <h3>무료 배송 및 반품</h3>
-          <img src="../../assets/arrowBottom.svg" />
+          <img src="/icons/arrowBottom.svg" />
         </div>
         <div class="toggle-content">
           <p>
@@ -145,7 +146,7 @@
       <div class="toggle-section">
         <div class="toggle-title">
           <h3>제작 과정</h3>
-          <img src="../../assets/arrowBottom.svg" />
+          <img src="/icons/arrowBottom.svg" />
         </div>
         <div class="toggle-content">
           <!-- 이곳에 토글 클릭시 나타날 컨텐츠가 들어갑니다. -->
@@ -157,12 +158,12 @@
           <h3>리뷰(0)</h3>
           <div style="display: flex; align-items: center; gap: 14px">
             <div>
-              <img src="../../assets/star.svg" />
-              <img src="../../assets/star.svg" />
-              <img src="../../assets/star.svg" />
+              <img src="/icons/star.svg" />
+              <img src="/icons/star.svg" />
+              <img src="/icons/star.svg" />
             </div>
 
-            <img src="../../assets/arrowBottom.svg" />
+            <img src="/icons/arrowBottom.svg" />
           </div>
         </div>
         <div class="toggle-content"></div>
@@ -171,7 +172,7 @@
       <div class="toggle-section">
         <div class="toggle-title">
           <h3>추가 정보</h3>
-          <img src="../../assets/arrowBottom.svg" />
+          <img src="/icons/arrowBottom.svg" />
         </div>
         <div class="toggle-content">
           <p></p>
@@ -186,10 +187,10 @@
       <h2 class="rec-title">추천 제품</h2>
       <div class="rec-slide-buttons">
         <button class="rec-slide-button">
-          <img src="../../assets/left.svg" />
+          <img src="/icons/left.svg" />
         </button>
         <button class="rec-slide-button">
-          <img src="../../assets/right.svg" />
+          <img src="/icons/right.svg" />
         </button>
       </div>
     </div>
@@ -219,26 +220,6 @@
   <!-- 푸터 -->
   <nike-footer></nike-footer>
 
-  <script>
-    document.querySelectorAll('.toggle-title').forEach(title => {
-      title.addEventListener('click', () => {
-        const content = title.nextElementSibling;
-        content.style.display =
-          content.style.display === 'block' ? 'none' : 'block';
-        title.querySelector('span').textContent =
-          content.style.display === 'block' ? '-' : '+';
-      });
-    });
-
-    document.querySelectorAll('.thumbnail').forEach(thumb => {
-      thumb.addEventListener('mouseover', () => {
-        document.querySelector('.main-image').src = thumb.src.replace(
-          'thumbnail',
-          'main',
-        );
-      });
-    });
-  </script>
 </body>
 
 </html>

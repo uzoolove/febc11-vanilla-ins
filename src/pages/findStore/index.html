@@ -12,8 +12,8 @@
 </head>
 
 <body>
-  <!-- 네비게이션바 -->
-  <nav-bar menu-items='["New & Featured", "Men", "Women", "Kids", "Sale"]'></nav-bar>
+  <!-- 네비게이션 바 -->
+  <nav-bar></nav-bar>
 
   <!-- 모바일 버전에서만 나타납니다 -->
   <div class="mobile-header">
@@ -36,7 +36,7 @@
       <!-- 검색바 -->
       <div class="search-container">
         <div class="search-input">
-          <img src="../../assets/search.svg" />
+          <img src="/icons/search.svg" />
           <input type="text" placeholder="위치 검색" />
         </div>
         <p>근처 매장: 15 개</p>
@@ -80,7 +80,7 @@
 
     <!-- 맵뷰 -->
     <div class="map-container active" id="map">
-      <div><img src="../../assets/map.svg" /></div>
+      <div><img src="/icons/map.svg" /></div>
     </div>
   </div>
   <!-- 컨텐츠 끝-->
@@ -88,47 +88,6 @@
   <!-- 푸터 -->
   <nike-footer></nike-footer>
 
-  <script>
-    const tabButtons = document.querySelectorAll('.tab-button');
-    const storeList = document.getElementById('storeList');
-    const map = document.getElementById('map');
-
-    function setActiveTab(tabName) {
-      tabButtons.forEach(button => {
-        button.classList.toggle('active', button.dataset.tab === tabName);
-      });
-
-      if (window.innerWidth <= 768) {
-        if (tabName === 'list') {
-          storeList.style.display = 'block';
-          map.style.display = 'none';
-        } else {
-          storeList.style.display = 'none';
-          map.style.display = 'block';
-        }
-      }
-    }
-
-    tabButtons.forEach(button => {
-      button.addEventListener('click', () =>
-        setActiveTab(button.dataset.tab),
-      );
-    });
-
-    // 초기 상태 설정
-    function setInitialState() {
-      if (window.innerWidth <= 768) {
-        setActiveTab('map');
-      } else {
-        storeList.style.display = 'block';
-        map.style.display = 'block';
-        tabButtons.forEach(button => button.classList.remove('active'));
-      }
-    }
-
-    window.addEventListener('resize', setInitialState);
-    setInitialState();
-  </script>
 </body>
 
 </html>
